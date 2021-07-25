@@ -13,6 +13,10 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
+;; needed if version is < 26.3
+(if (version< emacs-version "26.3")
+    (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+
 ; Activate all the packages (in particular autoloads)
 (package-initialize)
 ;; (package-refresh-contents)
