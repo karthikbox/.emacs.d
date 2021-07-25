@@ -42,7 +42,7 @@
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-c g") 'evil-force-normal-state)
+(global-set-key (kbd "C-g") 'evil-force-normal-state)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
