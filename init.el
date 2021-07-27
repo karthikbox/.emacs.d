@@ -6,6 +6,7 @@
 		     counsel
 		     swiper
 		     which-key
+		     magit
                      evil-leader))
 
 ; Add Melpa as the default Emacs Package repository
@@ -36,6 +37,7 @@
 (require 'ivy)
 (require 'counsel)
 (require 'swiper)
+(require 'magit)
 ;; enable this if you want `swiper' to use it
 ;; (setq search-default-mode #'char-fold-to-regexp)
 (global-set-key (kbd "C-s") 'swiper)
