@@ -7,6 +7,9 @@
 		     swiper
 		     which-key
 		     magit
+		     key-chord
+		     company
+		     modus-themes
                      evil-leader))
 
 ; Add Melpa as the default Emacs Package repository
@@ -56,15 +59,32 @@
 (require 'which-key)
 (which-key-mode)
 (which-key-setup-minibuffer)
+
+(setq inhibit-startup-screen t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (which-key evil-leader counsel))))
+ '(package-selected-packages
+   '(company key-chord modus-themes scad-mode which-key magit evil-leader counsel)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(require 'modus-themes)
+(modus-themes-select 'modus-vivendi-tinted)
+
+
+(require 'key-chord)
+(key-chord-mode 1)
+(key-chord-define-global "jj" 'evil-force-normal-state)
+
+(electric-pair-mode 1)
+
+(require 'company)
+(global-company-mode)
